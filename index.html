@@ -12,7 +12,6 @@
 
 <div class="header">
   <h1>Project Example</h1>
-  <p>Shatha Alhunite</p>
 
 </div><br>
 
@@ -20,18 +19,22 @@
 <div class="border" >
 
   <div class="frame" >
-    <img  src="https://www.my.gov.sa/wps/wcm/connect/3ab4da87-044f-4517-827d-fa4f68959501/NIC_400.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE-3ab4da87-044f-4517-827d-fa4f68959501-noiS1SQ" alt="W3Schools.com" style="width:300px;height:300px;" >
+    <img  src="https://www.my.gov.sa/wps/wcm/connect/3ab4da87-044f-4517-827d-fa4f68959501/NIC_400.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE-3ab4da87-044f-4517-827d-fa4f68959501-noiS1SQ" alt="W3Schools.com" width="300px" height="300px" >
   </div>
 
   <div class="frame">
+
     <form action=""  class="borderForm"><br>
       <label for="username" style="color: #2f9a8c" >User Name:</label><br>
       <input type="text" class="input" id="username" placeholder="Enter user name" name="username" > <br>
+
       <label for="Application" style="color: #2f9a8c" >Application Name:</label> <br>
       <select  class="select" id="Application" name="list" >    </select><br>
+
       <div>
         <input id="Search" type="submit" class="btn btn-primary" value="Search" />
       </div><br>
+
     </form>
     <div class="Note">
       <p>You must input tha user name or Application name...</p>
@@ -49,7 +52,7 @@
   <table class="table">
     <thead>
     <tr style="color: #2f9a8c">
-      <th># 1</th>
+      <th>#</th>
       <th>Application Name</th>
       <th>The role</th>
     </tr>
@@ -65,10 +68,23 @@
       <td>Alien</td>
       <td>collect.fee</td>
     </tr>
+    <tr>
+      <td>3</td>
+      <td>SaudiPassport</td>
+      <td>seePhoto</td>
+    </tr>
     </tbody>
   </table>
 </div>
 
+<div>
+
+  <footer>
+    <p>Author : Shatha Alhunite<br>
+      <a style="color: darkblue" href="mailto:hege@example.com">shatha.alhunite@gmail.com</a></p>
+  </footer>
+
+</div>
 <script>
     function enableSearch() {
       var userNotFilled = $.trim($('.input')[0].value) === '';
