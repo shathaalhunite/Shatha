@@ -4,16 +4,10 @@
 .header{
   background-color:#2f9a8c;
   color: White;
-  padding: 15px;
+  padding: 40px;
   text-align:center;
 }
-.Note{
-  background-color:#2f9a8c;
-  color: White;
-  padding: 14px;
-  text-align:left;
 
-}
 .select{
   width: 100%;
   padding: 7px 17px;
@@ -61,7 +55,7 @@
   width: 80%;
   height: 400px;
   display: inline-block;
-  border: 4px double #2f9a8c;
+  border: 4px outset #2f9a8c;
   border-radius: 12px;
 
 }
@@ -81,4 +75,9 @@ footer {
   padding: 3px;
   background-color: #2f9a8c;
   color: white;
+}
+.buttonStyle{
+  color:white;
+  background-color: #2f9a8c;
+
 }
