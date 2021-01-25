@@ -27,10 +27,9 @@
     <form action=""  class="borderForm"><br>
       <label for="username" style="color: #2f9a8c" >User Name:</label><br>
       <input type="text" class="input" id="username" placeholder="Enter user name" name="username" > <br>
+
       <label for="Application" style="color: #2f9a8c" >Application Name:</label> <br>
-      <select class="select" id="Application" name="list" >
-      <option value="id"> Please select one </option>
-      </select><br>
+      <select  class="select" id="Application" name="list" >    </select><br>
 
       <div>
         <input id="Search" type="submit" class="btn btn-primary" value="Search" />
@@ -85,30 +84,29 @@
       <a style="color: darkblue" href="mailto:hege@example.com">shatha.alhunite@gmail.com</a></p>
   </footer>
 
-+</div>
+</div>
 <script>
-  function enableSearch() {
-    var userNotFilled = $.trim($('.input')[0].value) === '';
-    var appNotSelected = $('.form-control option:selected[value="id"]').length > 0;
-    $("#Search").attr("disabled", userNotFilled && appNotSelected )
-  }
+    function enableSearch() {
+      var userNotFilled = $.trim($('.input')[0].value) === '';
+      var appNotSelected = $('.select option:selected[value="First"]').length > 0;
+      $("#Search").attr("disabled", userNotFilled && appNotSelected )
+    }
 
-  $(document).ready(function() {
-    $('.input').on('input', enableSearch);
-    $('.form-control').on('change', enableSearch)
-    enableSearch();
-  });
-
-  $(document).ready(function() {
-   var data= $.getJSON("../select_List.json", function(data) {
-      var result='';
-        $.each(data, function(key, value) {
-        $("#Application").append("<option>" + value.name + "</option>");
-      });
+    $(document).ready(function() {
+      $('.input').on('input', enableSearch);
+      $('.select').on('change', enableSearch)
+      enableSearch();
     });
-  });
 
-
+  var json = '{"First":"Please select one", "App1": "Security","App2": "Alien","App3": "Saudi Passport","App4":"Civil"}';
+  var data = JSON.parse(json);
+  var result='';
+  for (var property in data) {
+    if (data.hasOwnProperty(property)) {
+      result+='<option value="'+property+'">'+data[property]+'</option>';
+    }
+  }
+  document.getElementById('Application').innerHTML=result;
   </script>
 </body>
 </html>
