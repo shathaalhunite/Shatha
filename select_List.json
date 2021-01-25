@@ -1,0 +1,20 @@
+[
+
+  {
+    "id": "",
+    "Application": "AC",
+    "name": "Alien"
+},
+  {
+    "Application": "SC",
+    "name": "Security Authorization"
+  },
+  {
+    "Application": "SP",
+    "name": "Saudi Passport"
+  },
+  {
+    "Application": "CV",
+    "name": "Civil"
+  }
+]
