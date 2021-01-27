@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="/Shatha/Css/Form.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type = "text/javascript" src="Script.js"></script>
 </head>
 <body>
 
@@ -29,10 +30,12 @@
       <input type="text" class="input" id="username" placeholder="Enter user name" name="username" > <br>
 
       <label for="Application" style="color: #2f9a8c" >Application Name:</label> <br>
-      <select  class="select" id="Application" name="list" >    </select><br>
+      <select  class="select" id="Application" name="list" >
+        <option value=" "> Please Select One </option>
+      </select><br>
 
       <div>
-        <input id="Search" type="submit" class="btn btn-primary" value="Search" />
+        <input id="Search" type="submit" class="btn btn-primary" value="Search" onclick="on_submit()"/>
       </div><br>
 
     </form>
@@ -45,34 +48,22 @@
 
 </div>
 
-<div class="tablePadding">
+<div  class="tablePadding">
 
   <h2>Aplication List</h2>
   <p>The Table show the Aplication name and role:</p>
   <table class="table">
     <thead>
-    <tr style="color: #2f9a8c">
+    <tr id="result" style="color: #2f9a8c">
       <th>#</th>
       <th>Application Name</th>
-      <th>The role</th>
+      <th>User Name</th>
+      <th>Application Roles</th>
+      <th>Users Roles</th>
     </tr>
     </thead>
     <tbody>
-    <tr>
-      <td>1</td>
-      <td>Security Authriztion</td>
-      <td>see.female.photo</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Alien</td>
-      <td>collect.fee</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>SaudiPassport</td>
-      <td>seePhoto</td>
-    </tr>
+
     </tbody>
   </table>
 </div>
@@ -85,28 +76,6 @@
   </footer>
 
 </div>
-<script>
-    function enableSearch() {
-      var userNotFilled = $.trim($('.input')[0].value) === '';
-      var appNotSelected = $('.select option:selected[value="First"]').length > 0;
-      $("#Search").attr("disabled", userNotFilled && appNotSelected )
-    }
 
-    $(document).ready(function() {
-      $('.input').on('input', enableSearch);
-      $('.select').on('change', enableSearch)
-      enableSearch();
-    });
-
-  var json = '{"First":"Please select one", "App1": "Security","App2": "Alien","App3": "Saudi Passport","App4":"Civil"}';
-  var data = JSON.parse(json);
-  var result='';
-  for (var property in data) {
-    if (data.hasOwnProperty(property)) {
-      result+='<option value="'+property+'">'+data[property]+'</option>';
-    }
-  }
-  document.getElementById('Application').innerHTML=result;
-  </script>
 </body>
 </html>

@@ -1,20 +1,22 @@
 [
-
   {
-    "id": "",
+    "id": "1",
     "Application": "AC",
-    "name": "Alien"
-},
-  {
-    "Application": "SC",
-    "name": "Security Authorization"
-  },
-  {
-    "Application": "SP",
-    "name": "Saudi Passport"
-  },
-  {
-    "Application": "CV",
-    "name": "Civil"
-  }
+    "name": "Alien",
+    "Roles": [
+        "Create",
+        "Delete",
+        "Update",
+        "Search"
+    ],
+    "users": [
+      {
+        "id": "2",
+        "userName": "devc35",
+        "userRoles":[
+             "Delete" ]
+      }]
+
+
+}
 ]

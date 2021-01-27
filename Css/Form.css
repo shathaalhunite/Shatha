@@ -7,7 +7,12 @@
   padding: 40px;
   text-align:center;
 }
-
+.Note{
+  background-color:#2f9a8c;
+  color: White;
+  padding: 10px;
+  text-align:left;
+}
 .select{
   width: 100%;
   padding: 7px 17px;
