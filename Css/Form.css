@@ -10,7 +10,7 @@
 .Note{
   background-color:#2f9a8c;
   color: White;
-  padding: 10px;
+  padding: 3px;
   text-align:left;
 }
 .select{
@@ -85,4 +85,11 @@ footer {
   color:white;
   background-color: #2f9a8c;
 
+}
+.button{
+  background-color: #2f9a8c;
+  color:white;
+  font-size: 16px;
+  padding: 5px 10px;
+  border: none;
 }
