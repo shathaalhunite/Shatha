@@ -2,21 +2,21 @@
   "userName" :[
     {
       "id": "1",
-      "username": "Devc35",
+      "username": "devc35",
       "name": "Alien",
       "code": "1",
       "userRoles": ["AC01.UPDATE","AC01.CREATE"]
     },
     {
       "id": "2",
-      "username": "Devc35",
+      "username": "devc35",
       "name": "Security Authorization",
       "code": "2",
       "userRoles": ["SC01.UPDATE","SC01.CREATE"]
     },
     {
       "id": "3",
-      "username": "Devc35",
+      "username": "devc",
       "name": "Civil",
       "code": "3",
       "userRoles": ["SR01.UPDATE","SR01.CREATE"]
