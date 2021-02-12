@@ -1,121 +1,128 @@
-function enableSearch() {
-  var userNotFilled = $.trim($('.input')[0].value) === '';
-  var appNotSelected = $('.select option:selected[value=" "]').length > 0;
-  $("#Search").attr("disabled", userNotFilled && appNotSelected )
-}
-$(document).ready(function() {
-  $('.input').on('input', enableSearch);
-  $('.select').on('change', enableSearch)
-  enableSearch();
-});
-
-/*
-//The function call JSON.file and retrieve the applications
-$(document).ready(function () {
-  //Assign the request object to variable
-  var myRequest=new XMLHttpRequest();
-  myRequest.onreadystatechange=function (){
-    //console.log(this.responseText);
-    if(this.readyState===4 && this.status===200){
-      var object =JSON.parse(this.responseText);
-      //console.log(object.Application.length);
-      for(var i =0; i<object.Application.length;i++){
-        $("#Application").append($('<option></option>').attr('value', object.Application[i].code).text(object.Application[i].name));
-      }
-    }
-  };
-  myRequest.open("GET","searchUserName.json",true);
-  myRequest.send();
-});
-*/
-
-//Make function to do the request
-
-/*
-function on_submit() {
- //Assign the request object to variable
- // var myRequest=new XMLHttpRequest();
-
- myRequest.onreadystatechange=function (){
-
-   Ready state => The status of the request
-   [0] Request not initialized
-   [1] Server connection establish
-   [2] Request Received
-   [3] Processing Request
-   [4] Request is finished and response is ready
-   Status =>> Response status code
-   [200] OK
-
-   if(this.readyState===4 && this.status===200){
-    // console.log(this.responseText);
-     //Convert Response text to JS object
-     var myObj=JSON.parse(this.responseText);
-     console.log(myObj.userName);
-     for(let i =0; i<myObj.userName.length; i++){
-       // console.log(myObj.username);
-      // myText += myObj[i].id+"<br>";
-
-       // console.log(myText);
-     }}};
- myRequest.open("GET","searchUserName.json",true);
- myRequest.send();
-
-
-}
-*/
-
 $(document).ready(function () {
   $("#Search").click(function (data) {
-    var validate = Validate();
-    //$("#message").html(validate);
+    var appNotSelected = $('.select option:selected[value=" "]').length > 0;
+    var optionText = $("#Application option:selected").text();
+   //console.log(appNotSelected);
     var userFilled = $.trim($('.input')[0].value);
-    if (validate.length === 0) {
+  //console.log(userFilled);
+    //When enter just the user name will get the authority for user and all authority for all applications
+    if((userFilled !== '')&& (appNotSelected===true)){
+      //console.log(userFilled);
       $.ajax({
         type: "GET",
         dataType: "json",
-        url: "searchUserName.json",
-        success: function (data) {
-          //console.log(userFilled);
-          for(var i =0; i<data.userName.length;i++){
-            //console.log(data.userName[i].username);
-            if(userFilled===data.userName[i].username){
-              //console.log(data.userName[i].username);
+        url: "getApplicationauthorities.json",
+        success :function (data){
+          for (var index=0;index<data.data.authority.length;index++){
+            var app='';
+            app+='<tr>';
+            app+='<td>'+ data.data.authority[index].roleName+'</td>';
+            app+='<td>' + ' true ' + '</td>';
+            app+='<td>' + ' ' + '</td>';
+            app+='</tr>';
+            $('#result').append(app);
 
-
-            }
 
           }
-
-
-
-
         }
       });
-    }
-  });
-  function Validate() {
-    var errorMessage = "";
-    if ($.trim($('.input')[0].value)==='') {
-      errorMessage += "► put user name ";
-    }
-    return errorMessage;
-  }
-  });
+      $.ajax({
+        type: "GET",
+        dataType: "json",
+        url: "getOperators.json",
+        success: function (data) {
+          // console.log(userFilled);
+          //  console.log(data);
+          for(var i =0; i<data.data.operator.userName.length;i++){
+            //console.log(data.data.operator.userName);
+            if(userFilled===data.data.operator.userName){
+              //console.log(data.data.authorities);
+
+              var app='';
+              app+='<tr>';
+              app+='<td>'+data.data.authorities[i]+'</td>';
+              app+='<td>' + ' ' + '</td>';
+              app+='<td>' + ' true ' + '</td>';
+              app+='</tr>';
+              $('#result').append(app);
+            }}}
+      });
+    }else {
+      //When choices just from drop down list will show just the authority for application
+      if((userFilled === '')&&(appNotSelected===false)){
+
+        $.ajax({
+          type: "GET",
+          dataType: "json",
+          url: "getApplicationauthorities.json",
+          success :function (data){
+            console.log(optionText);
+              if(optionText===data.data.application.name){
+                console.log(data.data.application);
+                for(var iii=0;iii<data.data.authority.length;iii++){
+                  var app='';
+                  app+='<tr>';
+                  app+='<td>'+ data.data.authority[iii].roleName+'</td>';
+                  app+='<td>' + ' true ' + '</td>';
+                  app+='<td>' + ' ' + '</td>';
+                  app+='</tr>';
+                  $('#result').append(app);
+              }
+            }
+          }
+        });
+
+      } else{
+        //When  enter user name && application name will show all authority for user and application
+        if((userFilled !== '')&&(appNotSelected===false)){
+          $.ajax({
+            type: "GET",
+            dataType: "json",
+            url: "getApplicationauthorities.json",
+            success :function (data){
+              if(optionText===data.data.application.name){
+                for (var iiii=0;iiii<data.data.authority.length;iiii++){
+                  var app='';
+                  app+='<tr>';
+                  app+='<td>'+ data.data.authority[iiii].roleName+'</td>';
+                  app+='<td>' + ' true ' + '</td>';
+                  app+='<td>' + ' ' + '</td>';
+                  app+='</tr>';
+                  $('#result').append(app);
 
 
+                }
+              }
 
-$(document).ready(function() {
-  $.ajax({
-    type:"GET",
-    url: "searchUserName.json",
-    success: function(data)
-    {
-      console.log(data.Application);
-      for(var i =0; i<data.Application.length;i++){
-        $("#Application").append($('<option></option>').attr('value', data.Application[i].code).text(data.Application[i].name));
+            }
+          });
+          $.ajax({
+            type: "GET",
+            dataType: "json",
+            url: "getOperators.json",
+            success: function (data) {
+              // console.log(userFilled);
+              //  console.log(data);
+              for(var i =0; i<data.data.operator.userName.length;i++){
+                //console.log(data.data.operator.userName);
+                if(userFilled===data.data.operator.userName){
+                  //console.log(data.data.authorities);
+                  var app='';
+                  app+='<tr>';
+                  app+='<td>'+data.data.authorities[i]+'</td>';
+                  app+='<td>' + ' ' + '</td>';
+                  app+='<td>' + ' true ' + '</td>';
+                  app+='</tr>';
+                  $('#result').append(app);
+                }}}
+          });
+        }
       }
 
     }
+
   });
-})
+  });
+
+
+

@@ -1,18 +1,18 @@
 [
   {
-    "code": "1",
-    "name": "Alien"
+    "code": "AC",
+    "name": "نظام المقيمين"
 },
   {
-    "code": "2",
-    "name": "Security Authoriztion"
+    "code": "SC",
+    "name": "نظام الصلاحيات"
   },
   {
-    "code": "3",
-    "name": "Saudi Passport"
+    "code": "AD",
+    "name": "نظام العناوين"
   },
   {
-    "code": "4",
-    "name": "Civil"
+    "code": "BC",
+    "name": "نظام الحدود"
   }
 ]

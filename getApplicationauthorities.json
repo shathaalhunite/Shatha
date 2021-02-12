@@ -1,0 +1,26 @@
+{
+  "data": {
+    "application": {
+      "code": "BC",
+      "name": "نظام الحدود"
+    },
+    "authority": [
+      {
+        "appCode": "BC",
+        "roleName": "BC.EXIT.TRAVEL",
+        "description": "تسمح للمشغل ..",
+        "latinDescription": "dddd"
+      },
+      {
+        "appCode": "BC",
+        "roleName": "BC.EXIT",
+        "description": "تسمح للمشغل ..",
+        "latinDescription": "dddd"
+      }
+
+    ]
+
+  }
+
+
+}
