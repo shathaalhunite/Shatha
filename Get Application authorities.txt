@@ -1,0 +1,1036 @@
+{
+    "data": {
+        "application": {
+            "code": "BC",
+            "name": "‰Ÿ«„ «·ÕœÊœ"
+        },
+        "authorities": [
+            {
+                "appCode": "BC",
+                "roleName": "BC.EXIT.TRAVELLER.ALLIANCE.EXPIRED.VISA",
+                "description": " ”„Õ ··„‘€· »«Ã—«¡ Œ—ÊÃ «·„”«›— » √‘Ì—… „‰ ÂÌ…",
+                "latinDescription": "This security role gives permission to the operator to Exit a visitor with expired Alliance visa. This security roles was added by CR#182828"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "BC.EXIT.TRAVELLER.EVENT.EXPIRED.VISA",
+                "description": "«·’·«ÕÌ…  ” Œœ„ ›Ì Êﬁ  «·Œ—ÊÃ (“Ì«—… ›⁄«·Ì… ) ›Ì Õ«· ﬂÊ‰ «· √‘Ì—… „‰ ÌÂ…",
+                "latinDescription": "This security role gives permission to the operator to Exit a visitor with expired Event visa. This security roles was added by CR#216586"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "BC01.EXIT.GCC.WITH.HAJJ.VIOLATION",
+                "description": "",
+                "latinDescription": "This security role gives permission to the operator to Exit a GCC with a hajj violation."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "BC04.ALLOW.VST.ENTRY.ALN.FNL.VSA",
+                "description": "",
+                "latinDescription": "This role will allow the operator to enter a visitor if the sponsor is Alien with Final visa. Security role added by CR#240991"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "BC04.ENT.VISIT.DIFF.SPONS.EXPIRED.VISA",
+                "description": "«·”„«Õ ··„‘€· »«œŒ«· “«∆— » √‘Ì—… ⁄„· ÃœÌœ… Ê·œÌÂ  √‘Ì—… Œ—ÊÃ Ê⁄Êœ… ”«»ﬁ… ’«·Õ… ⁄·Ï ‰›” «·ﬂ›Ì·",
+                "latinDescription": "This security role alows the user to enter a Visitor that has left the country previously with an Exit-Reentry visa(that visa is expired) enter with visa issued by different sponsor. Security role added by CR# 158573"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "BC04.ENTRY.VISITOR.WITH.VALID.EE.VISA",
+                "description": "",
+                "latinDescription": "This security role allows the operator to enter a visitor that has a previous Alien record and the exit reentry visa still valid. Security role added by CR#103689"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "BC04.ENTRY.VISITOR.WITH.VALID.IQAMA",
+                "description": "",
+                "latinDescription": "This security role allows the operator to enter a visitor that has a previous Alien record and the Iqama still valid. Security role added by CR#103689"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "BC05.PRINT.EXIT.ENTRY.CERTIFICATES.EXCEED.24H",
+                "description": "«·”„«Õ ··„‘€· »ÿ»«⁄… ‘Â«œ… «·œŒÊ· Ê«·Œ—ÊÃ »⁄œ „—Ê— 24 ”«⁄… „‰ ⁄„·Ì… «·œŒÊ· Ê«·Œ—ÊÃ",
+                "latinDescription": "This security role allows operator to print cross certificate even if the crossing it was done more than 24hrs ago. Security role added by CR#185318"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "BC45.ALLOW.ADDING.EXTRA.COMPANION",
+                "description": "",
+                "latinDescription": "This security role allows the user to add extra companion that were not listed under the visitor. Security role added by CR# 149931."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.ALIEN.OPERATOR",
+                "description": "",
+                "latinDescription": ""
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC01.ALLOW.ENTER.FLIGHT",
+                "description": "«·”„«Õ »«œŒ«· „⁄·Ê„«  «·—Õ·… ÊÃÂ… «·œŒÊ· Ê «·Œ—ÊÃ",
+                "latinDescription": "This is a security role to allow the user to be able to enter the flight details manually. Security roles added by CR#127220"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC01.ALLOW.UNKNOWN.AIRLINE",
+                "description": "··”„«Õ »«œŒ«· —Õ·… €Ì— „⁄—›…",
+                "latinDescription": "This is a security role to allow the user to be able to enter XX airline as unknown. Security roles added by CR#127220"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC01.AUTH.GEN.DOCO.NUM",
+                "description": "",
+                "latinDescription": "This security role gives permission to the operator to be able to choose (without document) radio button in exit entry search screen (BC01). Security roles added by CR#66193"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC01.CHANGE.XDATE",
+                "description": " €ÌÌ—  «—ÌŒ «·⁄»Ê—",
+                "latinDescription": "This security role allows the user to change the crossing date."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC01.ENTRY",
+                "description": "œŒÊ· «·„”«›—Ì‰",
+                "latinDescription": "This security role allows the user to execute the entry function BC01."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC01.EXIT",
+                "description": "Œ—ÊÃ «·„”«›—Ì‰",
+                "latinDescription": "This security role allows the user to execute the exit function BC01."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC01.SPECIAL.SEARCH",
+                "description": "«·»ÕÀ ⁄‰ Œ·ÌÃÌ √Ê „·«Õ",
+                "latinDescription": "This security role allows the user to execute a special search at crossing process."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC02.ASSOCIATE.COMPANION",
+                "description": "",
+                "latinDescription": "This security role allows the user to associate companion to a citizen at BC02."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC02.DETAIL.CITIZEN",
+                "description": " ›«’Ì· «·„Ê«ÿ‰Ì‰",
+                "latinDescription": "This security role allows the user to detail citizen information at BC02."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC02.ENTRY.CITIZEN",
+                "description": "œŒÊ· «·„Ê«ÿ‰Ì‰",
+                "latinDescription": "This security role allows the user to enter a citizen in KSA at BC02."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC02.ENTRY.TRAVEL.PASS",
+                "description": "",
+                "latinDescription": "This security role allows the user to enter a citizen in KSA using a travel pass at BC02."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC02.EXIT.CITIZEN",
+                "description": "Œ—ÊÃ «·„Ê«ÿ‰Ì‰",
+                "latinDescription": "This security role allows the user to exit a citizen from KSA at BC02."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC02.EXIT.EXP.ID",
+                "description": "·«⁄ÿ«¡ «·„‘€· «„ﬂ«‰Ì…  ”ÃÌ· Œ—ÊÃ „Ê«ÿ‰ »ÂÊÌ… ” ‰ ÂÌ Œ·«· 3 «‘Â—",
+                "latinDescription": "This security role gives operator permission to exit a citizen to GCC countries with National ID expired. Security role added by CR#125971"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC02.EXIT.EXP.PASS.ARAB.C",
+                "description": "·«⁄ÿ«¡ «·„‘€· «„ﬂ«‰Ì…  ”ÃÌ· Œ—ÊÃ „Ê«ÿ‰ »ÃÊ«“ ”Ì‰ ÂÌ Œ·«· 3 «‘Â— ÊÊÃÂ… «·Œ—ÊÃ œÊ·… ⁄—»Ì…",
+                "latinDescription": "This security role gives permission to the operator exit a Citizen with expired passport to a Arabic country. Security role added by CR#125971"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC02.EXIT.EXP.PASS.NARAB.C",
+                "description": "·«⁄ÿ«¡ «·„‘€· «„ﬂ«‰Ì…  ”ÃÌ· Œ—ÊÃ „Ê«ÿ‰ »ÃÊ«“ ”Ì‰ ÂÌ Œ·«· 6 «‘Â— ÊÊÃÂ… «·Œ—ÊÃ œÊ·… €Ì— ⁄—»Ì…",
+                "latinDescription": "This security role gives permission to the operator exit a Citizen with expired passport to a non Arabic country. Security role added by CR#125971"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC03.ENTRY.ALIEN",
+                "description": "œŒÊ· «·„ﬁÌ„Ì‰",
+                "latinDescription": "This security role allows the user to entry an Alien into KSA at BC03."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC03.EXIT.ALIEN",
+                "description": "Œ—ÊÃ «·„ﬁÌ„Ì‰",
+                "latinDescription": "This security role allows the user to exit an Alien from KSA at BC03."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC03.EXIT.ALIEN.WITHOUT.DEPS",
+                "description": "«·”„«Õ »„€«œ—… «·√Ã‰»Ì » √‘Ì—… Œ—ÊÃ ‰Â«∆Ì „⁄ »ﬁ«¡ »⁄÷ «· «»⁄Ì‰",
+                "latinDescription": "This security role allows the user to exit an Alien from KSA without his dependents at BC03."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ADD.GCC.CREW",
+                "description": "",
+                "latinDescription": "This security role allows the user to add a new GCC or Crew Visitor manually at BC04."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ADD.VISITOR",
+                "description": "«÷«›… «·“Ê«—",
+                "latinDescription": "This security role allows the user to add a new Normal Visitor manually at BC04."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.BCIN.MORE.THAN.ONE.DAY",
+                "description": "",
+                "latinDescription": "This security role allows the operator to cross a traveler with crossing date more than a day ago."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.DEPDT.GREATER.DOCEXP",
+                "description": " ”„Õ » ”ÃÌ· Œ—ÊÃ «·“«∆— «·”Ê—Ì „„‰ ÌÕ„· √Ì ‰Ê⁄  √‘Ì—… “Ì«—… ÊÃÊ«“Â „‰ ÂÌ",
+                "latinDescription": "In case of existence of validation of final departure date against document expiration date at exit time, this security must be created and used to cross visitors accordingly with nationality and visa specified at Analysis tab. Ignore this security role if not needed.\nSecurity role added by CR#80928"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ENTER.VISA.NOT.IN.MOFA",
+                "description": "œŒÊ· «·“Ê«— » √‘Ì—… €Ì— „ÊÃÊœ… ›Ì «·Œ«—ÃÌ…",
+                "latinDescription": "This security role allows the user to add a new Normal Visitor manually at BC04 that his visa can't be found in MOFA table ."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ENTRY.VISITOR",
+                "description": "œŒÊ· «·“Ê«—",
+                "latinDescription": "This security role allows the user to Entry Visitor into KSA at BC04."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ENTRY.VISITOR.IN.MOFA",
+                "description": "«·”„«Õ ··„‘€· » ⁄œÌ· »Ì«‰«  Œ«—ÃÌ… («·„œ… Ê«·Ã‰” Ê‰Ê⁄ «· √‘Ì—…)",
+                "latinDescription": "This security role allows the user to modify external data ( duration , gender and visa type ) ."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.EXIT.VIS.WITH.VIO",
+                "description": " ”„Õ » ”ÃÌ· Œ—ÊÃ «·“«∆— «·–Ì ·œÌÂ „Œ«·›«  „—Ê—Ì… €Ì— „”œœ…",
+                "latinDescription": "This security role gives permission to the operator to exit a visitor who has a traffic violation(s). Security roles added by CR#97363 and changed the usage in CR#188332"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.EXIT.VISITOR",
+                "description": "Œ—Ê«Ã «·“Ê«—",
+                "latinDescription": "This security role allows the user to Exit a Visitor from KSA at BC04."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.EXIT.VISITOR.IN.OMRA",
+                "description": "’·«ÕÌ… «·”„«Õ ·„€«œ—… «·„⁄ „— »⁄œ „÷Ï 30 ÌÊ„«",
+                "latinDescription": "This security role allows the user to ISSUE a special VISA ."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.ALLIANCE",
+                "description": " ”„Õ ··„‘€· »«’œ«—  √‘Ì—… Œ«’…",
+                "latinDescription": "This security role gives permission to the operator to Issue Alliance visa at arrival. This security role was added by CR#182828"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.BUSINESSMAN.VISIT",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… —Ã· «·√⁄„«·",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Business man. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.COMPANION.VISIT",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… —›Ìﬁ",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Companion Visa. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.COURTESY",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… „Ã«„·…",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Courtesy Visa. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.DIPLOMATIC",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… œ»·Ê„«”Ì…",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Diplomatic. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.DIPLOMATIC.RESIDENCE",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… «·«ﬁ«„… «·œ»·Ê„«”Ì…",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Diplomatic Residence. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.EMIGRANT",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… «·ÂÃ—…",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Emigrant. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.ESP.AUTH",
+                "description": "«’œ«—  √‘Ì—… ·Ã‰”Ì«  „⁄Ì‰… √Ê »Õ”» ‰Ê⁄  √‘Ì—… „⁄Ì‰ WEB",
+                "latinDescription": "This security role gives permission to the operator to Issue visa at arrival for some specific nationalities. This security role was added by CR#63744"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.EXCEPTIONAL.VISIT",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… «” À‰«∆Ì…",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Exceptional Visit. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.FAMILY.VISIT",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… ⁄«∆·Ì…",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Family Visit. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.FRIENDSHIP",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… «·’œ«ﬁ…",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Friendship. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.GOODS.DELIVERY",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—…  ”·Ì„ «·»÷«∆⁄",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Goods Delivery. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.GOVERNMENT.VISIT",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… ÕﬂÊ„Ì…",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Government Visit. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.MULTI",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… „›—œ… , \r\n«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… „ ⁄œœ…",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Multi. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.NAVIGATOR",
+                "description": "«·œÊ— √·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… «·„” ﬂ‘›",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Navigator. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.NUMBER",
+                "description": "«’œ«—  √‘Ì—… ··“Ê«— „‰ «·„Êﬁ⁄",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Number. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.OFFICIAL.DELEGATION.VISA",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… «·Ê›œ «·—”„Ì",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Official Delegation. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.OTHER",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… √Œ—Ï",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Other. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.PASS",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… «·„—Ê—",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Pass. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.PASSENGERS.CROSSING",
+                "description": "",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Passenger Crossing. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.PERSONAL.VISIT",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… «·‘Œ’Ì…",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Personal Visit. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.PREMIUM.IQAMA",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… «ﬁ«„… „„Ì“…",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Premium Iqama. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.REPRESENTATION.VISIT",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… «· „ÀÌ·",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Representation Visit. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.RESIDENCE",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… ·«’œ«—  √‘Ì—… «·«ﬁ«„…",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Residence. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.SAILOR",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… »Õ«—",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Sailor. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.SAILOR.VISIT",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… “Ì«—… »Õ«—",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Sailor Visit. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.SCIENTIST.OR.EXPERT",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… «·⁄·„«¡ «Ê «·Œ»—«¡",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Scientist or Expert. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.SEASON.WORK",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… «·⁄„· «·„Ê”„Ì…",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Season Work. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.SEASONAL.WORK",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… «·⁄„· «·„Ê”„Ì…",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Seasonal Work. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.SPECIAL",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… Œ«’…",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Special. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.STUDY",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… œ—«”…",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Study. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.TEMPORARY.WORK",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… «·⁄„· «·„ƒﬁ ",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Temporary Work. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.TOURISM.VISIT",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… ”Ì«ÕÌ…",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Tourism Visit. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.TRADE.VISIT",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… “«∆—  Ã«—…",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Trade Visit. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.TREAT.VISIT",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… ⁄·«Ã",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Treat Visit. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.VISITOR",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… “«∆—",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Visitor. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC04.ISSUE.VISA.WORK.VISIT",
+                "description": "«·œÊ— «·√„‰Ì ·„‰Õ ’·«ÕÌ… «’œ«—  √‘Ì—… «·⁄„·",
+                "latinDescription": "This security role allows operator to issue visa at arrival for visa type Work Visit. Security role added by CR#213815"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC05.CROSS.CERT",
+                "description": "",
+                "latinDescription": "This security role enables the crossing certification functionality at BC05."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC05.SEARCH",
+                "description": "«·»ÕÀ ⁄‰ «·„”«›—Ì‰",
+                "latinDescription": "This security role enables the search functionality at BC05."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC05.SEARCH.FOR.CITIZEN",
+                "description": "··»ÕÀ ⁄‰ „Ê«ÿ‰ ›Ì  ﬁ«—Ì— «·”›— ··„Ê«ÿ‰Ì‰",
+                "latinDescription": "This security role enables the search for a citizen functionality at BC05."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC06.DETAIL",
+                "description": " ›«’Ì· «·„”«›—Ì‰ «·„ﬂ›Ê·Ì‰",
+                "latinDescription": "This security role allows the user to access the screen BC06 travelers by sponsor."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC06.PRINT",
+                "description": "ÿ»«⁄… »Ì«‰«  «·„”«›—Ì‰ «·„ﬂ›Ê·Ì‰",
+                "latinDescription": "This security role allows the user to print travelers by sponsor at screen BC06."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC06.SEARCH",
+                "description": "«·»ÕÀ ⁄‰ «·„”«›—Ì‰ »—ﬁ„ «·ﬂ›Ì·",
+                "latinDescription": "This security role allows the user to search travelers by sponsor at screen BC06."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC07.CITIZENDETAIL.CROSSING",
+                "description": " ›«’Ì· ⁄»Ê— «·„Ê«ÿ‰Ì‰",
+                "latinDescription": "This security role allows the user to detail the extra info for citizen crossing at BC07 screen."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC09.DISPLAY",
+                "description": "⁄—÷  ›«’Ì· «·⁄»Ê—",
+                "latinDescription": "This security role allows the user to detail the crossing at BC09 screen."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC10.DISPLAY",
+                "description": "⁄—÷  ›«’Ì· «· «»⁄Ì‰",
+                "latinDescription": "This security role allows the user to display a list of dependents at BC10 screen."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC11.DELETE.DEPENDENT",
+                "description": "Õ–›  «»⁄ ··“«∆—",
+                "latinDescription": "This security role enables the user to delete a visitor dependent at BC11."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC11.DEPDT.GREATER.DOCEXP",
+                "description": " ”„Õ » ⁄œÌ·  «—ÌŒ «‰ Â«¡ «·«ﬁ«„… ··“«∆— «·”Ê—Ì",
+                "latinDescription": "This security role must be checked in case of the user changes the Final Departure Date and this date is greater than document expiration date. Security role added by CR#80928"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC11.MAINTAIN.VISITOR",
+                "description": " ⁄œÌ· »Ì«‰«  «·“«∆—",
+                "latinDescription": "This security role enables the user to update visitor information at BC11."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC11.UP.VISA.EXCEED.MAX.RES.ALLOWED",
+                "description": "«·”„«Õ » ÕœÌÀ »Ì«‰«  «· √‘Ì—… ··“«∆— ⁄‰œ  ⁄œÌ „œ… «· √‘Ì—… «·Õœ «·√ﬁ’Ï «·„”„ÊÕ »Â",
+                "latinDescription": "This permission will allow operators to update visa with residence days that exceed the max days allowed or extend resdence days to exceed the max day allowed\nSecurity role added by CR#165128"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC11.UPDATE.DEPENDENT",
+                "description": " ÕœÌÀ »Ì«‰«  «· «»⁄ ··“«∆—",
+                "latinDescription": "This security role enables the user to update dependent information at BC11."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC11.UPDATE.DOCUMENT",
+                "description": " ÕœÌÀ ÊÀÌﬁ… «·”›— ··“«∆—",
+                "latinDescription": "This security role enables the user to update document information at BC11."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC11.UPDATE.VISA.ALLIANCE",
+                "description": " „”Õ ··„‘€· » ⁄œÌ· »Ì«‰«  «· √‘Ì—… „‰ Ê«·Ï  √‘Ì—… Œ«’… ÃœÌœ…",
+                "latinDescription": "This security role gives permission to the operator to update the visa record of a person with Alliance visa. This security role was added by CR#182828"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC11.UPDATE.VISITOR",
+                "description": " ÕœÌÀ »Ì«‰«  «·“«∆—",
+                "latinDescription": "This security role gives permission to the operator to update the visitor record."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC11.UPDATE.VISITOR.SEX",
+                "description": "· ⁄œÌ· Ã‰” «·“«∆—",
+                "latinDescription": "This security role gives permission to the operator to update the gender of a visitor."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC11.UPDT.VISITOR.VISA.FINAL.DT",
+                "description": "· ⁄œÌ·  «—ÌŒ «‰ Â«¡ «·«ﬁ«„… ··“«∆—",
+                "latinDescription": "This security role gives permission to the operator to update the visa final departure date. This security role was added by CR#165128"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC11.UPDT.VISITOR.VISA.ISS.DT",
+                "description": "· ⁄œÌ·  «—ÌŒ «’œ«— «· √‘Ì—… ··“«∆—",
+                "latinDescription": "This security role gives permission to the operator to update the visa issue date. This security role was added by CR#165128"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC11.UPDT.VISITOR.VISA.ISS.PL",
+                "description": "· ⁄œÌ· „ﬂ«‰ «’œ«— «· √‘Ì—… ··“«∆—",
+                "latinDescription": "This security role gives permission to the operator to update the visa issue place. This security role was added by CR#165128"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC11.UPDT.VISITOR.VISA.NO",
+                "description": "· ⁄œÌ· —ﬁ„ «· √‘Ì—… ··“«∆—",
+                "latinDescription": "This security role gives permission to the operator to update the visa number. This security role was added by CR#165128"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC11.UPDT.VISITOR.VISA.SPN.NAME",
+                "description": "· ⁄œÌ· «”„ «·ﬂ›Ì· ··“«∆—",
+                "latinDescription": "This security role gives permission to the operator to update the sponsor name. This security role was added by CR#165128"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC11.UPDT.VISITOR.VISA.TRVL.COUNT",
+                "description": "· ⁄œÌ· ⁄œœ „—«  «” Œœ«„ «· √‘Ì—… ··“«∆—",
+                "latinDescription": "This security role gives permission to the operator to update the visa travel count (single, multiple). This security role was added by CR#165128"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC11.UPDT.VISITOR.VISA.TYPE",
+                "description": "· ⁄œÌ· ‰Ê⁄ «· √‘Ì—… ··“«∆—",
+                "latinDescription": "This security role gives permission to the operator to update the visa type. This security role was added by CR#165128"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC11.UPDT.VISITOR.VISA.VAL.DAYS",
+                "description": "· ⁄œÌ· ’·«ÕÌ… «· √‘Ì—… ··“«∆—",
+                "latinDescription": "This security role gives permission to the operator to update the visa valid resident days. This security role was added by CR#165128"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC11.VISITOR.ABSENT.OR.WANTED",
+                "description": "Ì”„Õ ··„‘€· «‰ Ì⁄œ· »Ì«‰«  «·“«∆— (  ›«’Ì·Â , ⁄‰œ„«  ﬂÊ‰ ( ›«’Ì· «· √‘Ì—…, ›«’Ì· «·„÷Ì›,Õ«·… «·“«∆— \"„ €Ì» ⁄‰ «·⁄„· \" √Ê ÌﬂÊ‰ „÷«› ›Ì ‰Ÿ«„ «·„ÿ·Ê»Ì‰ ( «·Õ«·«  «·À·«À :\"„‰⁄ «·”›— \",\"Ìﬁ»÷ ⁄·ÌÂ\",\"«Ìﬁ«› Œœ„« \"»«” À‰«¡ \" «·Õ«·…\" Ì»·€ »«·„—«Ã⁄…",
+                "latinDescription": "This security role gives permission to the operator to update a visitor record even if the visitor had an wanted hit or if he was absent to work. Security role added by CR#174011"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC112.BIOMETRIC.RULE.MAINTENANCE",
+                "description": " ⁄œÌ· «Ã—«¡«  «·Œ’«∆’ «·ÕÌÊÌ… ··„‰«›–",
+                "latinDescription": ""
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC12.CANCEL.ENTRY",
+                "description": "«·€«¡ ”Ã· «·œŒÊ·",
+                "latinDescription": "This security role enables the user to cancel the entry at BC12."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC12.CANCEL.EXIT",
+                "description": "«·€«¡ ”Ã· «·Œ—ÊÃ",
+                "latinDescription": "This security role enables the user to cancel the exit at BC12."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC12.CANCEL.TRAVEL",
+                "description": "«·€«¡ ”Ã· «·⁄»Ê—",
+                "latinDescription": "This security role enables the user to cancel the whole trip at BC12."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC12.CHANGE.CROSSING",
+                "description": " €ÌÌ— „⁄·Ê„«  ”Ã· «·⁄»Ê—",
+                "latinDescription": "This security role enables the user to change the crossing at BC12."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC12.DELETE.LAST.VISITOR",
+                "description": "Õ–› ”Ã· «·⁄»Ê— «·√ŒÌ— ··“«∆—",
+                "latinDescription": "This security role enables the user to delete the last visitor crossing at BC12."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC12.UPDATE.CROSSING",
+                "description": "",
+                "latinDescription": "This security role enables the user to update crossing information at BC12."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC13.SUSPENSION",
+                "description": "Õ«·… «·«Ìﬁ«› ··“«∆—",
+                "latinDescription": "This security role enables the user to use the suspenstion function at BC12."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC14.SEARCH",
+                "description": "«·»ÕÀ ⁄‰ «·»Ì«‰«  «·„ƒ—‘›…",
+                "latinDescription": "This security role allow the user to access the screen BC14 for search archive."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC15.DISPLAY",
+                "description": "⁄—÷ «·»Ì«‰«  «·„ƒ—‘›…",
+                "latinDescription": "This security role allow the user to access the screen BC15 to list the crossing archive"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC17.DISPLAY",
+                "description": "",
+                "latinDescription": "This security role allow the user to access the screen BC17 for Mofa Visa query"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC17.SEARCH",
+                "description": "«·»ÕÀ ⁄‰  √‘Ì—… Ê“«—… «·Œ«—ÃÌ…",
+                "latinDescription": "This security role allow the user to use the function search at BC17 MOFA visa query"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC21.DISPLAY",
+                "description": "⁄—÷  ›«’Ì· «·“Ê«—",
+                "latinDescription": "This security role allow the user to access the screen BC21"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC22.ALIENDETAIL.CROSSING",
+                "description": " ›«’Ì· ⁄»Ê— «·„ﬁÌ„Ì‰",
+                "latinDescription": "This security role allow the user to access the alien detail crossing at screen BC22"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC22.DISPLAY",
+                "description": "",
+                "latinDescription": "This security role allow the user to access the screen BC22"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC38.SEARCH",
+                "description": "",
+                "latinDescription": "This security role allow the user to do special query for MOFA at BC38"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC40.DEPORTATION",
+                "description": "",
+                "latinDescription": "This security role enables the user to use the deportation function at BC40."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC43.CHANGE.LOCATION",
+                "description": "",
+                "latinDescription": "This security role enables the user to change the location to simulate the system being used at Border location at BC43."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC44.CHANGE.IN.OUT.FLAG",
+                "description": "",
+                "latinDescription": "This security role enables the user to update the person in out flag to correct any problem between person and crossing records at BC44."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BC45.ASSOCIATE.COMPANION",
+                "description": "",
+                "latinDescription": "This security role alow the user to associate a companion after crossing at BC45."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BCAH.DISPLAY",
+                "description": "",
+                "latinDescription": "This security role allows the user to access the activity history screen."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BCAH.OPERATOR",
+                "description": "",
+                "latinDescription": "This security role allows the user to access the activity history and be able to access a different operator activity history."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BCIN.CROSS.ALIEN.HIT.INTERPOL",
+                "description": "",
+                "latinDescription": "This security role enables the user to cross an Alien with a hit in the Interpol list at BC03."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BCIN.CROSS.VISITOR.HIT.INTERPOL",
+                "description": "",
+                "latinDescription": "This security role enables the user to cross a Visitor with a hit in the Interpol list at BC04."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BCIN.FINAL.VISA.EXP",
+                "description": "",
+                "latinDescription": "This security role allows the user to cross an Alien with an expired final visa."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BCIN.ISSUE.DUPL.VISA",
+                "description": "",
+                "latinDescription": "This security role allows the operator to issue a visa that the number has been used previously."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BCIN.MOFA.VISA.EXP",
+                "description": "",
+                "latinDescription": "This security role allows the user to cross a visitor with a expired MOFA visa."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BCIN.MORE.THAN.ONE.DAY",
+                "description": "",
+                "latinDescription": "This security allows the user to change a crossing date beyond a day and cross the traveler."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BCIN.NOT.RETURN.NAT.CNTRY",
+                "description": "",
+                "latinDescription": "This security roles gives permission to the operator to exit a traveler that enter by land port with omrah visa and wants to exit no another country different from his nationality. Security role added by CR#89349"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BCIN.REENTRY.VISA.EXP",
+                "description": "",
+                "latinDescription": "This security role allows the user to cross an Alien with an expired exit-reentry visa."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BCIN.REPORT.DOC",
+                "description": "",
+                "latinDescription": "This security role allows the operator to continue the process even if the traveler has a document reported as lost or stolen."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BCIN.UPDATE.VISA.TYPE",
+                "description": "",
+                "latinDescription": "This security role alow the user to update visa type."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BCREPORTS",
+                "description": "",
+                "latinDescription": "This security role alow the user to access the main report screen."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BCREPORTS.BCRP007.LOCBYSEX",
+                "description": "",
+                "latinDescription": "This security role allows the operator to issue the report BCR007, cross by location and sex"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BCREPORTS.BCRP009.LOCBYVISATYPE",
+                "description": "",
+                "latinDescription": "This security role allows the operator to issue the report BCR009, cross by location and visa type"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BCREPORTS.BCRP014.FLIGHTBYSEX",
+                "description": "",
+                "latinDescription": "This security role allows the operator to issue the report BCR014, flight by sex"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BCREPORTS.BCRP017.FLIGHTBYVISATYPE",
+                "description": "",
+                "latinDescription": "This security role allows the operator to issue the report BCR017, flight by visa type"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BCREPORTS.OTHER.LOCATION",
+                "description": "",
+                "latinDescription": "This security role allows the operator to issue the report for other locations."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BCREPORTS.PERF.AUTHORITY",
+                "description": "",
+                "latinDescription": "This security allows the user to issue some reports inside RBC as some of the reports can cause performance's issues. Security roles added by CR#156320"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.BORDER_ADMIN",
+                "description": "",
+                "latinDescription": ""
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.CLEAR.MISC.ID",
+                "description": "",
+                "latinDescription": ""
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.CLEAR.MISC.ID.DENY",
+                "description": "",
+                "latinDescription": ""
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.CROSS.WITH.SERIOUS.CWL.HIT",
+                "description": "",
+                "latinDescription": "This security role allows the operator to cross the traveler with a serious CWL hit"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.EGATE.OPERATOR",
+                "description": "",
+                "latinDescription": ""
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.ENROLLMENT.TIMEOUT",
+                "description": "",
+                "latinDescription": ""
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.EXIT.HOH.WITHOUT.DIED.DEPS",
+                "description": "",
+                "latinDescription": "This security role allows the operator to exit the traveler without the dead dependents"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.EXIT.HOH.WITHOUT.MISSING.DEPS",
+                "description": "",
+                "latinDescription": "This security role allows the operator to exit the traveler without the missing dependents"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.EXIT.VIS.WITH.WORK.VISA",
+                "description": "",
+                "latinDescription": "This security role gives permission to exit a visitor with work visa. He should have iqama, but the operator can exit him with this authority. Security role added by CR#51292"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.EXIT.WITHOUT.COMPANIONS",
+                "description": "",
+                "latinDescription": "This security role allows the operator to exit the traveler without the companions"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.IF03.BORDER.SEARCH",
+                "description": "",
+                "latinDescription": ""
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.MILITARY.TRAVEL.TO.NON.GCC.BY.ID",
+                "description": "",
+                "latinDescription": "This security role allows the user to exit a military citizen by Id to a non GCC country. Security role added by CR# 166371"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.PC.SKIP.ENROLLMENT.ALL.NAT",
+                "description": "",
+                "latinDescription": "This security role allows the operator to cancel the enrollemnt for Pilgrim of any nationality. Security role added by CR#100496"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.PC.SKIP.ENROLLMENT.IRAQI.NAT",
+                "description": "",
+                "latinDescription": "This security role allows the operator to cancel the enrollemnt for Pilgrim of Iraqis. Security role added by CR#100496"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.PC.SKIP.VERIFICATION",
+                "description": "",
+                "latinDescription": "This security role alows the operator to exit a Pilgrim without doing a finger print verification. This security role was added by CR# 165841"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.PILGRIM.OPERATOR",
+                "description": "",
+                "latinDescription": ""
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.SKIP.BIOMETRICS",
+                "description": "",
+                "latinDescription": "This security role allows the operator to skip the enrolment process."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.SKIP.BIOMETRICS.VERIFY",
+                "description": "",
+                "latinDescription": "This security role allows the operator to skip the biometric verification."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.SKIP.DEPORTEE_VERIFICATION",
+                "description": "",
+                "latinDescription": "This security role allows the operator to skip the deportee biometric verification."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.SKIP.FEMALE.BIOMETRICS",
+                "description": "",
+                "latinDescription": "This security role allows the operator to skip the female enrolment."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.SKIP.SPONSOR.ID",
+                "description": "",
+                "latinDescription": "This security role allows the operator to issue some visa types without sponsor ID. Security role added by CR#126406"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.UPDATE.VISITOR.AT.CROSSING",
+                "description": "",
+                "latinDescription": "This security role allows the operator to update visitor information at crossing time."
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC12.CAN.DC.EXIT.AFTER.48HRS",
+                "description": "",
+                "latinDescription": "This security role allows user to cancel deportation exit after 48 hrs at BC12"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC12.CANCEL.DEPORTEE.EXIT",
+                "description": "",
+                "latinDescription": "This security role allows user to cancel deportation exit at BC12"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC40.CAN.DC.EXIT.AFTER.48HRS",
+                "description": "",
+                "latinDescription": "This security role allows user to cancel deportation exit after 48 hrs at BC40"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC40.CANCEL.DEPORTEE.EXIT",
+                "description": "",
+                "latinDescription": "This security role allows user to cancel deportation exit at BC40"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "BC.EXIT.ALIEN.WITH.EXPIRED.EXIT.ENTRY.VISA",
+                "description": "",
+                "latinDescription": "This security role will allow the operator to exit an Alien tha has an expired exit-reentry visa. Security role added by CR#167450"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "BC.EXIT.ALIEN.WITH.EXPIRED.FINAL.VISA",
+                "description": "",
+                "latinDescription": "This security role will allow the operator to exit an Alien tha has an expired final visa. Security role added by CR#167450"
+            },
+            {
+                "appCode": "BC",
+                "roleName": "RBC.CROSS.PERMANENT.PREMIUM.IQAMA.OVER.AGE",
+                "description": "",
+                "latinDescription": "This security role will allow to cross dependent with permanent premium iqama even that he is over age.\nSecurity role added by CR# 255400"
+            }
+        ]
+    },
+    "message": "",
+    "pageNumber": 0,
+    "total": 0,
+    "pageSize": 0,
+    "errorMessages": [],
+    "messages": []
+}

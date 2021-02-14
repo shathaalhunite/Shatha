@@ -1,7 +1,7 @@
 
 <html>
 <head>
-  <title>Project Example</title>
+  <title>Security Authorization</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="Css/Form.css">
@@ -15,54 +15,45 @@
 </head>
 <body>
 <div class="header">
-  <h1>Project Example</h1>
-
+  <h1>Security Authorization</h1>
 </div><br>
 
 <div class="frameAll">
-<div class="border" >
+  <form class="border" ><br>
+    <div class="frame">
 
-  <div class="frame" >
-    <img  src="/Shatha/IMG/NIC_400.png" alt="Nic" width="300px" height="300px" >
-  </div>
-
-  <div class="frame">
-
-    <form action=""  class="borderForm"><br>
-      <label for="username" style="color: #2f9a8c" >User Name:</label><br>
+      <label for="username" class="label">User Name:</label><br>
       <input type="text" class="input" id="username" placeholder="Enter user name" name="username" > <br>
 
-      <label for="Application" style="color: #2f9a8c" >Application Name:</label> <br>
+      <label for="Application" class="label">Application Name:</label> <br>
       <select class="select" id="Application" name="list">
-        <option value=" "> Please Select One </option>
-      </select><br>
+         <option value=" "> Please Select One </option>
+      </select>
+      <br><br>
 
       <div>
         <input id="Search" type="button"  class="button" value="Search"/>
+        <input id="Clear" type="button"  class="button" value="Clear"/>
       </div><br>
 
-    </form>
-    <div class="Note">
-      <p>You must input tha user name or Application name...</p>
+
     </div>
+
+    </form>
   </div>
 
-</div>
 
-</div>
-
-<div  class="tablePadding">
+<div class="tablePadding">
 
   <h2>Aplication List</h2>
-  <p>The Table show the Aplication name and role:</p>
-  <table id="result" class="table">
+  <p>The Table show the Application Role name and the User ROle:</p>
+  <table id="result" class="table" >
     <thead >
-    <tr style="color: #2f9a8c">
+      <tr style="color: #2f9a8c">
       <th>Ejb role name</th>
       <th>Application Roles</th>
       <th>User Roles</th>
-    </tr>
-
+      </tr>
     </thead>
     <tbody>
 
