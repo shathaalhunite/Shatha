@@ -2,8 +2,8 @@ $(document).ready(function () {
   $("#Search").click(function (data) {
 
     var appNotSelected = $('.select option:selected[value=" "]').length > 0;
-    var optionText = $("#Application option:selected").text();
-    var userFilled = $.trim($('.input')[0].value);
+    var optionText =     $("#Application option:selected").text();
+    var userFilled =     $.trim($('.input')[0].value);
     //console.log(appNotSelected);
     //console.log(userFilled);
     //When enter just the user name will get the authority for user and all authority for all applications
@@ -13,51 +13,82 @@ $(document).ready(function () {
         $.ajax({
           type: "GET",
           dataType: "json",
-          url: "getApplicationauthorities.json",
-          success :function (data){
-            for (var index=0;index<data.data.authority.length;index++){
-              var app='';
-              app+='<tr>';
-              app+='<td>'+ data.data.authority[index].roleName+'</td>';
-              app+='<td>' + ' true ' + '</td>';
-              app+='<td>' + ' ' + '</td>';
-              app+='</tr>';
-              $('#result').append(app);
-              $('#result').show();
-            }
-
-
-          }
-
-        });
-        $.ajax({
-          type: "GET",
-          dataType: "json",
           url: "getOperators.json",
           success: function (data) {
             // console.log(userFilled);
             //  console.log(data);
-            for(var i =0; i<data.data.operator.userName.length;i++){
+            let operatorAuth;
+            for (var i = 0; i < data.data.operator.userName.length; i++) {
+              if (userFilled === data.data.operator.userName) {
+                operatorAuth = [];
+                for (var r = 0; r < data.data.authorities.length; r++) {
+                  var key = r;
+                  var val = data.data.authorities[r];
 
-              //console.log(data.data.operator.userName);
-              if(userFilled===data.data.operator.userName){
-                //console.log(data.data.authorities);
+                  operatorAuth.push(val);
 
-                var app='';
-                app+='<tr>';
-                app+='<td>'+data.data.authorities[i]+'</td>';
-                app+='<td>' + ' ' + '</td>';
-                app+='<td>' + ' true ' + '</td>';
-                app+='</tr>';
-                $('#result').append(app);
-                $('#result').show();
+                }
+
               }
             }
+            //console.log(operatorAuth);
+
+            $.ajax({
+              type: "GET",
+              dataType: "json",
+              url: "getApplicationauthorities.json",
+              success: function (data) {
+                let applicationAuth = [];
+
+                for (var r = 0; r < data.data.authority.length; r++) {
+                  var key = r;
+                  var val = data.data.authority[r].roleName;
+
+                  applicationAuth.push(val);
+
+                }
+                //console.log(applicationAuth);
+                var all =union(operatorAuth,applicationAuth);
+               // console.log(all);
+                for (var operator = 0; operator < all.length; operator++) {
+                  //console.log(data.data.authority[index].roleName);
+                  //console.log(operatorAuth);
+
+                    var app = '';
+                    app += '<tr>';
+                    app += '<td>' + all[operator] + '</td>';
+                    app += '<td>' + '  ' + '</td>';
+                    app += '<td>' + ' ' + '</td>';
+                    app += '</tr>';
+                    $('#result').append(app);
+                    $('#result').show();
+
+                }
+                var table = $("table tbody");
+                table.find('tr').each(function (i) {
+                  var $tds = $(this).find('td'),
+                      ejpRole = $tds.eq(0).text(),
+                      userRole = $tds.eq(1).text(),
+                      appRole = $tds.eq(2).text();
+                  console.log('Row ' + (i + 1) + ':\nejpRole: ' + ejpRole
+                  + '\nuserRole: ' + userRole
+                  + '\nappRole: ' + appRole);
+
+                  for (var filter=0;filter<applicationAuth.length;filter++){
+                    if($tds.eq(0).text()===applicationAuth[filter]){
+                     
+                    }
+                  }
+                });
+              }
+            });
+
 
           }
-
         });
+
       }
+
 
     }else {
       //When choices just from drop down list will show just the authority for application
@@ -68,9 +99,9 @@ $(document).ready(function () {
             dataType: "json",
             url: "getApplicationauthorities.json",
             success :function (data){
-              console.log(optionText);
+              //console.log(optionText);
               if(optionText===data.data.application.name){
-                console.log(data.data.application);
+               // console.log(data.data.application);
                 for(var iii=0;iii<data.data.authority.length;iii++){
                   var app='';
                   app+='<tr>';
@@ -82,6 +113,8 @@ $(document).ready(function () {
                   $('#result').show();
                 }
 
+              }else{
+                alert("The application authority not found");
               }
             }
           });
@@ -97,43 +130,58 @@ $(document).ready(function () {
               dataType: "json",
               url: "getApplicationauthorities.json",
               success :function (data){
-                if(optionText===data.data.application.name){
-                  for (var iiii=0;iiii<data.data.authority.length;iiii++){
-                    var app='';
-                    app+='<tr>';
-                    app+='<td>'+ data.data.authority[iiii].roleName+'</td>';
-                    app+='<td>' + ' true ' + '</td>';
-                    app+='<td>' + ' ' + '</td>';
-                    app+='</tr>';
-                    $('#result').append(app);
-                    $('#result').show();
+                let application_Auth = [];
+                  for (var Auth = 0; Auth < data.data.authority.length; Auth++) {
+                    var key = Auth;
+                    var val = data.data.authority[Auth].roleName;
+
+                    application_Auth.push(val);
 
                   }
-                }
 
+                $.ajax({
+                  type: "GET",
+                  dataType: "json",
+                  url: "getOperators.json",
+                  success: function (data) {
+                    // console.log(userFilled);
+                    //  console.log(data);
+                    let operator_Auth;
+                    for (var i = 0; i < data.data.operator.userName.length; i++) {
+                      if (userFilled === data.data.operator.userName) {
+                        operator_Auth = [];
+                        for (var Opera_Auth = 0; Opera_Auth < data.data.authorities.length; Opera_Auth++) {
+                          var key = Opera_Auth;
+                          var val = data.data.authorities[Opera_Auth];
+
+                          operator_Auth.push(val);
+
+                        }
+                        var Auth =union(application_Auth,operator_Auth);
+                        // console.log(all);
+
+                      }
+                    }
+                    for (var operators = 0; operators < Auth.length; operators++) {
+                      //console.log(data.data.authority[index].roleName);
+                      //console.log(operatorAuth);
+
+                      var app = '';
+                      app += '<tr>';
+                      app += '<td>' + Auth[operators] + '</td>';
+                      app += '<td>' + '  ' + '</td>';
+                      app += '<td>' + ' ' + '</td>';
+                      app += '</tr>';
+                      $('#result').append(app);
+                      $('#result').show();
+
+
+                    }
+                  }
+                });
               }
             });
-            $.ajax({
-              type: "GET",
-              dataType: "json",
-              url: "getOperators.json",
-              success: function (data) {
-                // console.log(userFilled);
-                //  console.log(data);
-                for(var i =0; i<data.data.operator.userName.length;i++){
-                  //console.log(data.data.operator.userName);
-                  if(userFilled===data.data.operator.userName){
-                    //console.log(data.data.authorities);
-                    var app='';
-                    app+='<tr>';
-                    app+='<td>'+data.data.authorities[i]+'</td>';
-                    app+='<td>' + ' ' + '</td>';
-                    app+='<td>' + ' true ' + '</td>';
-                    app+='</tr>';
-                    $('#result').append(app);
-                    $('#result').show();
-                  }}}
-            });
+
           }}}
 
     }
@@ -141,4 +189,28 @@ $(document).ready(function () {
   });
   });
 
+function union(arra1, arra2) {
+
+  if ((arra1 == null) || (arra2==null))
+    return void 0;
+
+  const obj = {};
+
+  for (var i = arra1.length-1; i >= 0; -- i)
+    obj[arra1[i]] = arra1[i];
+
+  for (var i = arra2.length-1; i >= 0; -- i)
+    obj[arra2[i]] = arra2[i];
+
+  const res = [];
+
+  for (const n in obj)
+  {
+
+    if (obj.hasOwnProperty(n))
+      res.push(obj[n]);
+  }
+
+  return res;
+}
 

@@ -7,15 +7,29 @@
     "authority": [
       {
         "appCode": "BC",
-        "roleName": "BC.EXIT.TRAVEL",
+        "roleName": "RDA.CASE_UPDATORR",
         "description": "تسمح للمشغل ..",
         "latinDescription": "dddd"
       },
       {
         "appCode": "BC",
-        "roleName": "BC.EXIT",
+        "roleName": "RDA.CANCEL.RUN.AWAY",
         "description": "تسمح للمشغل ..",
         "latinDescription": "dddd"
+      },
+      {
+        "appCode": "BC",
+        "roleName": "RD21.TRAFIIC",
+        "description": "تسمح للمشغل ..",
+        "latinDescription": "dddd"
+
+      },
+      {
+        "appCode": "BC",
+        "roleName": "RD.TRAFIICdddd",
+        "description": "تسمح للمشغل ..",
+        "latinDescription": "dddd"
+
       }
 
     ]
