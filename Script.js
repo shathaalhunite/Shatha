@@ -25,7 +25,8 @@ $(document).ready(function () {
                   var key = r;
                   var val = data.data.authorities[r];
 
-                  operatorAuth.push(val);
+                  operatorAuth.push(data.data.authorities[r]);
+                //  console.log(operatorAuth);
 
                 }
 
@@ -42,27 +43,27 @@ $(document).ready(function () {
 
                 for (var r = 0; r < data.data.authority.length; r++) {
                   var key = r;
+
                   var val = data.data.authority[r].roleName;
 
+
                   applicationAuth.push(val);
+                  // applicationAuth.push(role);
 
                 }
                 //console.log(applicationAuth);
-                var all =union(operatorAuth,applicationAuth);
-               // console.log(all);
+                var all = union(operatorAuth, applicationAuth);
+
+                // console.log(all);
                 for (var operator = 0; operator < all.length; operator++) {
-                  //console.log(data.data.authority[index].roleName);
-                  //console.log(operatorAuth);
-
-                    var app = '';
-                    app += '<tr>';
-                    app += '<td>' + all[operator] + '</td>';
-                    app += '<td>' + '  ' + '</td>';
-                    app += '<td>' + ' ' + '</td>';
-                    app += '</tr>';
-                    $('#result').append(app);
-                    $('#result').show();
-
+                  var app = '';
+                  app += '<tr >';
+                  app += '<td>' + all[operator] + '</td>';
+                  app += '<td>' + '  ' + '</td>';
+                  app += '<td>' + '  ' + '</td>';
+                  app += '</tr>';
+                  $('#result').append(app);
+                  $('#result').show();
                 }
                 var table = $("table tbody");
                 table.find('tr').each(function (i) {
@@ -70,19 +71,23 @@ $(document).ready(function () {
                       ejpRole = $tds.eq(0).text(),
                       userRole = $tds.eq(1).text(),
                       appRole = $tds.eq(2).text();
-                  console.log('Row ' + (i + 1) + ':\nejpRole: ' + ejpRole
-                  + '\nuserRole: ' + userRole
-                  + '\nappRole: ' + appRole);
 
-                  for (var filter=0;filter<applicationAuth.length;filter++){
-                    if($tds.eq(0).text()===applicationAuth[filter]){
-                     
+                  for (var filter = 0; filter < applicationAuth.length; filter++) {
+                    if (ejpRole === applicationAuth[filter]) {
+                      $tds.eq(1).replaceWith('<td>' + 'true' + '</td>');
+                      //console.log(ejpRole);
                     }
                   }
+                 for(var opertFilter=0;opertFilter<operatorAuth.length;opertFilter++){
+                   if(ejpRole===operatorAuth[opertFilter]){
+                     $tds.eq(2).replaceWith('<td>' + 'true' + '</td>');
+                   }
+                 }
+
                 });
+
               }
             });
-
 
           }
         });
@@ -177,6 +182,26 @@ $(document).ready(function () {
 
 
                     }
+                    var table = $("table tbody");
+                    table.find('tr').each(function (i) {
+                      var $tds = $(this).find('td'),
+                          ejpRole = $tds.eq(0).text(),
+                          userRole = $tds.eq(1).text(),
+                          appRole = $tds.eq(2).text();
+
+                      for (var filter = 0; filter < application_Auth.length; filter++) {
+                        if (ejpRole === application_Auth[filter]) {
+                          $tds.eq(1).replaceWith('<td>' + 'true' + '</td>');
+                          //console.log(ejpRole);
+                        }
+                      }
+                      for(var opertFilter=0;opertFilter<operator_Auth.length;opertFilter++){
+                        if(ejpRole===operator_Auth[opertFilter]){
+                          $tds.eq(2).replaceWith('<td>' + 'true' + '</td>');
+                        }
+                      }
+
+                    });
                   }
                 });
               }
