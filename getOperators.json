@@ -5,7 +5,7 @@
       "id":1119010161,
       "name": "عماد سعيد ابراهيم"
     },
-    "authorities": ["RDA.CASE_UPDATORR", "RDA.CANCEL.RUN.AWAY","RD21.TRAFIIC","RD22.TRAFIIC","RD23.TRAFIIC","RD24.TRAFIIC"]
+    "authorities": ["RDA.CASE_UPDATORR", "RDA.CANCEL.RUN.AWAY","RD21.TRAFIIC","RD22.TRAFIIC","RD23.TRAFIIC","RD24.TRAFIIC","RD.TRAFIICdddd"]
 
   }
 }

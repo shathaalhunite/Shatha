@@ -1,9 +1,17 @@
 
+.img{
+  background-color:white;
+  border-radius: 20px;
+  padding: 20px;
+  text-align:right;
+  width: 20%;
+}
 .header{
-  background-color:#2f9a8c;
-  color: White;
-  padding: 40px;
-  text-align:center;
+  background-color: #2f9a8c;
+  color: white;
+  padding: 50px;
+  text-align:right;
+
 }
 .frame {
 
@@ -15,6 +23,7 @@
   text-align: left;
 }
 .tablePadding{
+  padding-top: 10%;
   padding-left:10%;
   padding-right:10%;
 }
@@ -57,11 +66,14 @@ body {
   text-align: center;
 }
 footer {
-  width: 100%;
+  width: 50%;
   text-align: center;
-  padding: 3px;
-  background-color: #2f9a8c;
-  color: white;
+  padding: 8px;
+  background-color: white;
+  color:black;
+  display: inline;
+  border: 10px  #2f9a8c;
+  float: right;
 }
 .button{
   background-color: #2f9a8c;

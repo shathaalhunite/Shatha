@@ -4,97 +4,40 @@ $(document).ready(function () {
     var appNotSelected = $('.select option:selected[value=" "]').length > 0;
     var optionText =     $("#Application option:selected").text();
     var userFilled =     $.trim($('.input')[0].value);
-    //console.log(appNotSelected);
-    //console.log(userFilled);
+    //console.log(optionText);
+    // console.log(userFilled);
+    //  console.log(data);
+
     //When enter just the user name will get the authority for user and all authority for all applications
     if((userFilled !== '')&& (appNotSelected===true)){
+       //check if the table has data or not
       if ($('#result td').text().trim() === ""){
-        //console.log(userFilled);
         $.ajax({
           type: "GET",
           dataType: "json",
           url: "getOperators.json",
           success: function (data) {
-            // console.log(userFilled);
-            //  console.log(data);
-            let operatorAuth;
+            //check if the  user already exist in LDAP
             for (var i = 0; i < data.data.operator.userName.length; i++) {
               if (userFilled === data.data.operator.userName) {
-                operatorAuth = [];
-                for (var r = 0; r < data.data.authorities.length; r++) {
-                  var key = r;
-                  var val = data.data.authorities[r];
+                let app = '';
+                app += '<tr >' + '<td>' + data.data.authorities[i] + '</td>' + '<td>' + '  ' + '</td>'+'<td>' + ' true ' + '</td>'+'</tr>';
 
-                  operatorAuth.push(data.data.authorities[r]);
-                //  console.log(operatorAuth);
-
-                }
-
-              }
-            }
-            //console.log(operatorAuth);
-
-            $.ajax({
-              type: "GET",
-              dataType: "json",
-              url: "getApplicationauthorities.json",
-              success: function (data) {
-                let applicationAuth = [];
-
-                for (var r = 0; r < data.data.authority.length; r++) {
-                  var key = r;
-
-                  var val = data.data.authority[r].roleName;
-
-
-                  applicationAuth.push(val);
-                  // applicationAuth.push(role);
-
-                }
-                //console.log(applicationAuth);
-                var all = union(operatorAuth, applicationAuth);
-
-                // console.log(all);
-                for (var operator = 0; operator < all.length; operator++) {
-                  var app = '';
-                  app += '<tr >';
-                  app += '<td>' + all[operator] + '</td>';
-                  app += '<td>' + '  ' + '</td>';
-                  app += '<td>' + '  ' + '</td>';
-                  app += '</tr>';
                   $('#result').append(app);
                   $('#result').show();
-                }
-                var table = $("table tbody");
-                table.find('tr').each(function (i) {
-                  var $tds = $(this).find('td'),
-                      ejpRole = $tds.eq(0).text(),
-                      userRole = $tds.eq(1).text(),
-                      appRole = $tds.eq(2).text();
-
-                  for (var filter = 0; filter < applicationAuth.length; filter++) {
-                    if (ejpRole === applicationAuth[filter]) {
-                      $tds.eq(1).replaceWith('<td>' + 'true' + '</td>');
-                      //console.log(ejpRole);
-                    }
-                  }
-                 for(var opertFilter=0;opertFilter<operatorAuth.length;opertFilter++){
-                   if(ejpRole===operatorAuth[opertFilter]){
-                     $tds.eq(2).replaceWith('<td>' + 'true' + '</td>');
-                   }
-                 }
-
-                });
-
+              }else{
+                //show error if the user not found
+                  $("div#errMsg").css("color", "red");
+                  $("div#errMsg").html("The Racf user not found ");
               }
-            });
-
+            }
+          },
+          error: function () {
+            alert('Error!');
           }
-        });
-
+        }
+        );
       }
-
-
     }else {
       //When choices just from drop down list will show just the authority for application
       if((userFilled === '')&&(appNotSelected===false)){
@@ -104,23 +47,24 @@ $(document).ready(function () {
             dataType: "json",
             url: "getApplicationauthorities.json",
             success :function (data){
-              //console.log(optionText);
+              //check if the application has authority in database and already exist
               if(optionText===data.data.application.name){
-               // console.log(data.data.application);
                 for(var iii=0;iii<data.data.authority.length;iii++){
                   var app='';
-                  app+='<tr>';
-                  app+='<td>'+ data.data.authority[iii].roleName+'</td>';
-                  app+='<td>' + ' true ' + '</td>';
-                  app+='<td>' + ' ' + '</td>';
-                  app+='</tr>';
+                  app+='<tr>'+'<td>'+ data.data.authority[iii].roleName+'</td>'+'<td>' + ' true ' + '</td>'+'<td>' + ' ' + '</td>'+'</tr>';
+
                   $('#result').append(app);
                   $('#result').show();
                 }
 
               }else{
-                alert("The application authority not found");
+                //show error if the application not found in database
+                $("div#errMsg").css("color", "red");
+                $("div#errMsg").html("The application doesn't have authority or not found in data base ");
               }
+              },
+            error: function () {
+              alert('Error!');
             }
           });
         }
@@ -136,12 +80,11 @@ $(document).ready(function () {
               url: "getApplicationauthorities.json",
               success :function (data){
                 let application_Auth = [];
+                //Get the data to put it in first array
                   for (var Auth = 0; Auth < data.data.authority.length; Auth++) {
                     var key = Auth;
                     var val = data.data.authority[Auth].roleName;
-
                     application_Auth.push(val);
-
                   }
 
                 $.ajax({
@@ -149,50 +92,39 @@ $(document).ready(function () {
                   dataType: "json",
                   url: "getOperators.json",
                   success: function (data) {
-                    // console.log(userFilled);
-                    //  console.log(data);
                     let operator_Auth;
                     for (var i = 0; i < data.data.operator.userName.length; i++) {
                       if (userFilled === data.data.operator.userName) {
                         operator_Auth = [];
+                        //Get the data to put it in second array
                         for (var Opera_Auth = 0; Opera_Auth < data.data.authorities.length; Opera_Auth++) {
                           var key = Opera_Auth;
                           var val = data.data.authorities[Opera_Auth];
-
                           operator_Auth.push(val);
-
                         }
-                        var Auth =union(application_Auth,operator_Auth);
-                        // console.log(all);
+                        //Merge the two array in one and not repeat the same ejb role
+                        var unionAuth =union(application_Auth,operator_Auth);
 
                       }
                     }
-                    for (var operators = 0; operators < Auth.length; operators++) {
-                      //console.log(data.data.authority[index].roleName);
-                      //console.log(operatorAuth);
-
+                    //Read the 'unionAuth' to put all authority together
+                    for (var operators = 0; operators < unionAuth.length; operators++) {
                       var app = '';
-                      app += '<tr>';
-                      app += '<td>' + Auth[operators] + '</td>';
-                      app += '<td>' + '  ' + '</td>';
-                      app += '<td>' + ' ' + '</td>';
-                      app += '</tr>';
+                      app += '<tr>'+'<td>' + unionAuth[operators] + '</td>'+'<td>' + '  ' + '</td>'+'<td>' + ' ' + '</td>'+'</tr>';
                       $('#result').append(app);
                       $('#result').show();
-
-
                     }
+                    //Get the last table to update the second column 'Application Role ' to be true or the third column to 'User Role ' to be true or both of them be true
                     var table = $("table tbody");
                     table.find('tr').each(function (i) {
                       var $tds = $(this).find('td'),
-                          ejpRole = $tds.eq(0).text(),
-                          userRole = $tds.eq(1).text(),
-                          appRole = $tds.eq(2).text();
+                          ejpRole = $tds.eq(0).text();
+                         //userRole = $tds.eq(1).text(),
+                        //appRole = $tds.eq(2).text();
 
                       for (var filter = 0; filter < application_Auth.length; filter++) {
                         if (ejpRole === application_Auth[filter]) {
                           $tds.eq(1).replaceWith('<td>' + 'true' + '</td>');
-                          //console.log(ejpRole);
                         }
                       }
                       for(var opertFilter=0;opertFilter<operator_Auth.length;opertFilter++){
@@ -205,15 +137,13 @@ $(document).ready(function () {
                   }
                 });
               }
-            });
+            })
 
           }}}
-
     }
-
   });
   });
-
+//this function to union two array in one array without repeat
 function union(arra1, arra2) {
 
   if ((arra1 == null) || (arra2==null))
