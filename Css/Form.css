@@ -1,4 +1,16 @@
+.has-role{
+  color: green;
+  background-image: url("true.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
 
+}
+.not-role{
+  color: red;
+  background-image: url("false.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+}
 .img{
   background-color:white;
   border-radius: 20px;
@@ -90,3 +102,6 @@ footer {
 .table{
   display: none;
 }
+
+
+

@@ -30,6 +30,8 @@
         "description": "تسمح للمشغل ..",
         "latinDescription": "dddd"
 
+      },{
+        "roleName": "RD.Td"
       }
 
     ]
