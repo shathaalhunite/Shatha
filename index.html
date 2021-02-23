@@ -1,5 +1,4 @@
-
-<html>
+<html xmlns:https="http://www.w3.org/1999/xhtml">
 <head>
   <title>Security Authorization</title>
   <meta charset="utf-8">
@@ -10,8 +9,9 @@
   <script type = "text/javascript" src="Script.js"></script>
   <script type = "text/javascript" src="scriptButton.js"></script>
   <script type = "text/javascript" src="scriptDropdownList.js"></script>
-
-
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.css">
 </head>
 <body>
 
@@ -24,7 +24,7 @@
 
 <div class="frameAll">
   <form class="border" ><br>
-    <div  class="frame">
+    <div  id="form" class="frame">
 
       <label for="username" class="label">User Name:</label><br>
       <input type="text" class="input" id="username" placeholder="Enter user name" name="username" > <br>
@@ -36,8 +36,8 @@
       <br><br>
 
       <div>
-        <input id="Search" type="button"  class="button" value="Search"/>
-        <input id="Clear" type="button"  class="button" value="Clear"/>
+        <input id="Search" onclick="addOverlay();" type="button"  class="button" value="Search"/>
+        <input id="Clear"  onclick="clear();" type="submit"  class="button" value="Clear"/>
       </div><br>
 
 
@@ -55,7 +55,7 @@
     </thead>
     </tbody>
   </table>  <br><br> <br><br>
-  <div id="errMsg" ></div>
+  <div id="errMsg" class="errMsg" ></div>
 
 </div>
 
@@ -70,3 +70,4 @@
 
 </body>
 </html>
+

@@ -101,7 +101,11 @@ footer {
 }
 .table{
   display: none;
+  overflow:scroll;
 }
-
+.errMsg{
+  color: red;
+  font-weight: bold;
+}
 
 

@@ -16,28 +16,28 @@ $(document).ready(function () {
         },
         error: function(xhr){
           var errorMessage = xhr.status + ': ' + xhr.statusText
-          $("div#errMsg").css("color", "red");
           $("div#errMsg").html('Error - ' + errorMessage);
         }
 
       });
     }
     function getOpertorauth() {
+
       callAjax("getOperators.json").done(function (data){
 
         //check if the  user already exist in LDAP
         var app=Object.keys(data.data.authorities).map(key => { return  '<tr >'+ '<td>' + data.data.authorities[key] + '</td>' + '<td>' + '  ' + '</td>' + '<td class="has-role">' + '</td>' + '</tr>';
         });
-
         $('#result').empty();
         $('#result').append('<tr style="color: #2f9a8c">'+ '<th>Ejb role name</th>'+ '<th>Application Roles</th>' + '<th>User Roles</th>' + '</tr>' + app);
         $('#result').show();
       });
+
     }
     function getApplicationauth() {
       callAjax("getApplicationauthorities.json").done(function (data) {
         //check if the application has authority in database and already exist
-        var app = '';
+
         if (applicationCode === data.data.application.code) {
           var app=Object.keys(data.data.authority).map(key =>{ return '<tr>' + '<td>' + data.data.authority[key].roleName + '</td>' + '<td class="has-role">' + '</td>' + '<td>' + ' ' + '</td>' + '</tr>'; });
 
@@ -46,8 +46,7 @@ $(document).ready(function () {
           $('#result').show();
         } else {
           //show error if the application not found in database
-          $("div#errMsg").css("color", "red");
-          $("div#errMsg").html("The application doesn't have authority or not found in data base ");
+          $("div#errMsg").html("The application : " + applicationCode + " doesn't have authority or not found in database");
         }
 
       });
@@ -132,4 +131,13 @@ function union(applications, operatorRoles) {
     }
   }
   return obj;
+}
+function addOverlay() {
+    $("#username").attr("disabled", true);
+    $("#Application").attr("disabled",true);
+
+}
+function clear(){
+  $("#username").attr("enabled", true);
+  $("#Application").attr("enabled",true);
 }
